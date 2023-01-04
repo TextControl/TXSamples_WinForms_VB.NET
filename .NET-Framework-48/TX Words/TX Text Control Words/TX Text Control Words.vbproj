@@ -1,0 +1,253 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2D606E32-BE6F-453A-89B7-559173002879}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>My.MyApplication</StartupObject>
+    <RootNamespace></RootNamespace>
+    <AssemblyName>TX Text Control Words</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>false</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>TX Text Control Words.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>false</DefineTrace>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>TX Text Control Words.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>Off</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>tx.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="TXBarcode, Version=31.0.700.500, Culture=neutral, PublicKeyToken=6b83fe9a75cfb638, processorArchitecture=MSIL" />
+    <Reference Include="TXBarcode.Windows.Forms, Version=31.0.700.500, Culture=neutral, PublicKeyToken=6b83fe9a75cfb638, processorArchitecture=MSIL" />
+    <Reference Include="TXDrawing, Version=31.0.700.500, Culture=neutral, PublicKeyToken=6b83fe9a75cfb638, processorArchitecture=MSIL" />
+    <Reference Include="TXDrawing.Windows.Forms, Version=31.0.700.500, Culture=neutral, PublicKeyToken=6b83fe9a75cfb638, processorArchitecture=MSIL" />
+    <Reference Include="TXTextControl, Version=31.0.2400.500, Culture=neutral, PublicKeyToken=6b83fe9a75cfb638, processorArchitecture=MSIL" />
+    <Reference Include="TXTextControl.Windows.Forms, Version=31.0.1600.500, Culture=neutral, PublicKeyToken=6b83fe9a75cfb638, processorArchitecture=MSIL" />
+    <Reference Include="TXTextControl.Windows.Forms.Design, Version=31.0.115.500, Culture=neutral, PublicKeyToken=6b83fe9a75cfb638, processorArchitecture=MSIL" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Behavior\MainWindow_DragAndDrop.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Behavior\MainWindow_OpenHyperlink.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Behavior\MainWindow_Shortcuts.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Supporting Classes and Dialogs\UserAccessDialog.Designer.vb" />
+    <Compile Include="Supporting Classes and Dialogs\UserAccessDialog.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Supporting Classes and Dialogs\UserInfo.vb" />
+    <Compile Include="Supporting Classes and Dialogs\PasswordDialog.Designer.vb" />
+    <Compile Include="Supporting Classes and Dialogs\PasswordDialog.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Behavior\MainWindow_DpiChanged.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Layout\1. File Menu Item\MainWindow_FileMenuItem.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Layout\1. File Menu Item\MainWindow_FileMenuItem_Click.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Layout\1. File Menu Item\MainWindow_FileMenuItem_DropDownOpening.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Layout\1. File Menu Item\MainWindow_FileMenuItem_Methods.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Layout\2. Edit Menu Item\MainWindow_EditMenuItem.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Layout\2. Edit Menu Item\MainWindow_EditMenuItem_Click.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Layout\2. Edit Menu Item\MainWindow_EditMenuItem_DropDownOpening.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Layout\2. Edit Menu Item\MainWindow_EditMenuItem_Methods.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Layout\3. View Menu Item\MainWindow_ViewMenuItem.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Layout\3. View Menu Item\MainWindow_ViewMenuItem_Click.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Layout\3. View Menu Item\MainWindow_ViewMenuItem_DropDownOpening.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Layout\3. View Menu Item\MainWindow_ViewMenuItem_Methods.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Layout\4. Insert Menu Item\MainWindow_InsertMenuItem.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Layout\4. Insert Menu Item\MainWindow_InsertMenuItem_Click.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Layout\4. Insert Menu Item\MainWindow_InsertMenuItem_DropDownOpening.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Layout\4. Insert Menu Item\MainWindow_InsertMenuItem_Methods.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Layout\5. Format Menu Item\MainWindow_FormatMenuItem.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Layout\5. Format Menu Item\MainWindow_FormatMenuItem_Click.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Layout\5. Format Menu Item\MainWindow_FormatMenuItem_DropDownOpening.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Layout\5. Format Menu Item\MainWindow_FormatMenuItem_Methods.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Layout\6. Table Menu Item\MainWindow_TableMenuItem.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Layout\6. Table Menu Item\MainWindow_TableMenuItem_Click.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Layout\6. Table Menu Item\MainWindow_TableMenuItem_DropDownOpening.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Layout\MainWindow_Toolbars.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainWindow.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainWindow.Designer.vb">
+      <DependentUpon>MainWindow.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="My Project\Resources.de.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.de.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Supporting Classes and Dialogs\UserAccessDialog.resx" />
+    <EmbeddedResource Include="Supporting Classes and Dialogs\PasswordDialog.resx" />
+    <EmbeddedResource Include="MainWindow.resx">
+      <DependentUpon>MainWindow.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\licenses.licx" />
+    <EmbeddedResource Include="My Project\Resources.de.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.de.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\app.manifest" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Images\RightToLeft_Small.svg" />
+    <Content Include="tx.ico" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+</Project>
