@@ -60,7 +60,7 @@ Namespace TXTextControl.Words
         '-----------------------------------------------------------------------------------------------------------
         Private Sub AddShapeItem(ByVal items As ToolStripItemCollection, ByVal shapeType As Drawing.ShapeType)
             ' Get text and icon by using the ResourceProvider
-            Dim strResourceID As String = "TXITEM_SHAPE_" & shapeType
+            Dim strResourceID As String = "TXITEM_SHAPE_" & shapeType.ToString()
             Dim strText As String = ResourceProvider.GetToolTipDescription(strResourceID)
             Dim bmpImage As Bitmap = ResourceProvider.GetSmallIcon(strResourceID, Me)
 
@@ -91,7 +91,7 @@ Namespace TXTextControl.Words
         '-----------------------------------------------------------------------------------------------------------
         Private Sub AddBarcodeItem(ByVal items As ToolStripItemCollection, ByVal barcodeType As Barcode.BarcodeType)
             ' Get text and icon by using the ResourceProvider
-            Dim strResourceID As String = "TXITEM_BARCODE_" & barcodeType
+            Dim strResourceID As String = "TXITEM_BARCODE_" & barcodeType.ToString()
             Dim strText As String = ResourceProvider.GetToolTipTitle(strResourceID)
             Dim bmpImage As Bitmap = ResourceProvider.GetSmallIcon(strResourceID, Me)
 
